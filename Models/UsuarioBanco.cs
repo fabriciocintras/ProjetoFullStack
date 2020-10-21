@@ -12,13 +12,16 @@ namespace ProjetoFullStack.Models
             Conexao.Open();
             string query = "insert into usuario(Nome,Login,Senha) value(@Nome,@Login,@Senha)";
             MySqlCommand comando = new MySqlCommand(query,Conexao);
-
             comando.Parameters.AddWithValue("@Nome",usuario.Nome);
             comando.Parameters.AddWithValue("@Login", usuario.Login);
             comando.Parameters.AddWithValue("@Senha",usuario.Senha);
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
+
+
+    
+
         
 
     }
