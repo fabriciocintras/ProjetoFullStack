@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using MySqlConnector;
 
 namespace ProjetoFullStack.Models
@@ -19,6 +20,55 @@ namespace ProjetoFullStack.Models
             Conexao.Close();
         }
 
+        public List<Usuario> Query()
+        {
+            MySqlConnection conexao = new MySqlConnection(dadosConexao);
+            conexao.Open();
+            string sql = "select * from usuario order by Nome";
+            MySqlCommand comando = new MySqlCommand(sql,conexao);
+            MySqlDataReader reader = comando.ExecuteReader();
+            List<Usuario> lista = new List<Usuario>();
+                while(reader.Read())
+                {
+                    Usuario us = new Usuario();
+                    us.Id = reader.GetInt32("Id");
+
+                    if(!reader.IsDBNull(reader.GetOrdinal("Nome")))
+                        us.Nome = reader.GetString("Nome");
+                    if(!reader.IsDBNull(reader.GetOrdinal("Login")))
+                        us.Login = reader.GetString("Login");
+                    if(!reader.IsDBNull(reader.GetOrdinal("Senha")))
+                        us.Senha = reader.GetString("Senha");
+                        lista.Add(us);
+                }
+                conexao.Close();
+                return lista;
+        }
+
+        public Usuario QueryLogin(Usuario u)
+        {
+            MySqlConnection conexao = new MySqlConnection(dadosConexao);
+            conexao.Open();
+            string sql = "select * from usuario where Login = @Login and Senha = @Senha";
+            MySqlCommand comando = new MySqlCommand(sql,conexao);
+            comando.Parameters.AddWithValue("@Login",u.Login);
+            comando.Parameters.AddWithValue("@Senha",u.Senha);
+            MySqlDataReader reader = comando.ExecuteReader();
+            Usuario us = null;
+                if(reader.Read())
+                {
+                    us = new Usuario();
+                    us.Id = reader.GetInt32("Id");
+                    if(!reader.IsDBNull(reader.GetOrdinal("Nome")))
+                        us.Nome = reader.GetString("Nome");
+                    if(!reader.IsDBNull(reader.GetOrdinal("Login")))
+                        us.Login = reader.GetString("Login");
+                    if(!reader.IsDBNull(reader.GetOrdinal("Senha")))
+                        us.Senha = reader.GetString("Senha");
+                }
+                conexao.Close();
+                return us;
+        }
 
     
 

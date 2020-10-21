@@ -34,3 +34,5 @@ C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\ne
 C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\ProjetoFullStack.pdb
 C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\ProjetoFullStack.genruntimeconfig.cache
 C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\cadastro.cshtml.g.cs
+C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listar.cshtml.g.cs
+C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Login.cshtml.g.cs
