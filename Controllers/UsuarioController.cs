@@ -9,7 +9,7 @@ namespace ProjetoFullStack.Controllers
     {
         public IActionResult Cadastro()
         {
-            if(HttpContext.Session.GetInt32("idUsuario")== null)
+            if(HttpContext.Session.GetInt32("idUsuario")== null || HttpContext.Session.GetInt32("tipoUsuario")!= 0 )
                 return RedirectToAction("Login");
             return View();
         }
@@ -41,6 +41,7 @@ namespace ProjetoFullStack.Controllers
             {
                 HttpContext.Session.SetInt32("idUsuario", usuario.Id);
                 HttpContext.Session.SetString("nomeUsuario", usuario.Nome);
+                 HttpContext.Session.SetInt32("tipoUsuario", usuario.Tipo);
                 return View();
             }
             else

@@ -16,7 +16,7 @@ namespace ProjetoFullStack.Models
             comando.Parameters.AddWithValue("@Nome",usuario.Nome);
             comando.Parameters.AddWithValue("@Login", usuario.Login);
             comando.Parameters.AddWithValue("@Senha",usuario.Senha);
-            comando.Parameters.AddWithValue("@Senha",usuario.Tipo);
+            comando.Parameters.AddWithValue("@Tipo",usuario.Tipo);
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
