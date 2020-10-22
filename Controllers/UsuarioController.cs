@@ -33,16 +33,15 @@ namespace ProjetoFullStack.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(Usuario u)
+        public IActionResult Login(Usuario user)
         {
             UsuarioBanco ub = new UsuarioBanco();
-            Usuario usuario = ub.QueryLogin(u);
+            Usuario usuario = ub.QueryLogin(user);
             if(usuario != null)
             {
-                ViewBag.Mensagem = "Voce esta logado!";
-                HttpContext.Session.SetInt32("idUsuario", usuario.Id);//foi criado sessao para id;
-                HttpContext.Session.SetString("nomeUsuario", usuario.Nome);//foi criado sessao para nome;
-                return View("Cadastro");
+                HttpContext.Session.SetInt32("idUsuario", usuario.Id);
+                HttpContext.Session.SetString("nomeUsuario", usuario.Nome);
+                return View();
             }
             else
             {

@@ -1,8 +1,8 @@
-@model Usuario
+@model Produtos
 @{
-ViewData["Title"]="Cadastro do uisuario";
+ViewData["Title"]="Cadastro do Produtos";
 }
-<h2>Cadastro de Usuário</h2> 
+<h2>Cadastro de Produtos</h2> 
     <p id="">@ViewBag.Mensagem</p> 
     <form asp-action="Cadastro" method="POST">      
         <p>         
@@ -10,21 +10,16 @@ ViewData["Title"]="Cadastro do uisuario";
             <input asp-for="Nome" />     
         </p>     
         <p>         
-            <label asp-for="Login">Login:</label>         
-            <input asp-for="Login" />     
-        </p>     
-        <p>         
-            <label asp-for="Senha">Senha:</label>         
-            <input asp-for="Senha" type="password"/>     
-        </p> 
-        <p>         
+            <label asp-for="Valor">Valor:</label>         
+            <input asp-for="Valor" />     
+        </p>  
+        @*  <p>         
             <label asp-for="Tipo">Tipo de conta:</label>         
             <select name="Tipo" id="">
                 <option value="0">ADMINISTRADOR</option>
                 <option value="1">COLABORADOR</option>
             </select>    
-        </p>     
-        <p>         
+        </p>   *@     
             <input type="submit" value="Cadastrar" />     
         </p> 
     </form> 

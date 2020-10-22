@@ -11,11 +11,12 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection Conexao = new MySqlConnection(dadosConexao);
             Conexao.Open();
-            string query = "insert into usuario(Nome,Login,Senha) value(@Nome,@Login,@Senha)";
+            string query = "insert into usuario(Nome,Login,Senha,Tipo) value(@Nome,@Login,@Senha,@Tipo)";
             MySqlCommand comando = new MySqlCommand(query,Conexao);
             comando.Parameters.AddWithValue("@Nome",usuario.Nome);
             comando.Parameters.AddWithValue("@Login", usuario.Login);
             comando.Parameters.AddWithValue("@Senha",usuario.Senha);
+            comando.Parameters.AddWithValue("@Senha",usuario.Tipo);
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
@@ -32,6 +33,7 @@ namespace ProjetoFullStack.Models
                 {
                     Usuario us = new Usuario();
                     us.Id = reader.GetInt32("Id");
+                     us.Tipo = reader.GetInt32("Tipo");
 
                     if(!reader.IsDBNull(reader.GetOrdinal("Nome")))
                         us.Nome = reader.GetString("Nome");
@@ -59,12 +61,15 @@ namespace ProjetoFullStack.Models
                 {
                     us = new Usuario();
                     us.Id = reader.GetInt32("Id");
+                    us.Tipo = reader.GetInt32("Tipo");
+                    
                     if(!reader.IsDBNull(reader.GetOrdinal("Nome")))
                         us.Nome = reader.GetString("Nome");
                     if(!reader.IsDBNull(reader.GetOrdinal("Login")))
                         us.Login = reader.GetString("Login");
                     if(!reader.IsDBNull(reader.GetOrdinal("Senha")))
                         us.Senha = reader.GetString("Senha");
+                    
                 }
                 conexao.Close();
                 return us;
