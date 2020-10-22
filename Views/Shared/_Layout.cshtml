@@ -26,10 +26,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Cadastro">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Listar">Lista</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Listar">ListaUsuario</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Cadastro">CadastrarProduto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Listar">ListarProdutos</a>
                         </li>
                         <li  class="nav-item">@if(Context.Session.GetInt32("idUsuario") != null)
                         {

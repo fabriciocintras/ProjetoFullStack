@@ -9,7 +9,7 @@ namespace ProjetoFullStack.Controllers
     {
         public IActionResult Cadastro()
         {
-            if(HttpContext.Session.GetInt32("idUsuario")== null)
+            if(HttpContext.Session.GetInt32("idUsuario")== null || HttpContext.Session.GetInt32("tipoUsuario")!= 0 )
                 return RedirectToAction("Login");
             return View();
         }
@@ -33,16 +33,16 @@ namespace ProjetoFullStack.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login(Usuario u)
+        public IActionResult Login(Usuario user)
         {
             UsuarioBanco ub = new UsuarioBanco();
-            Usuario usuario = ub.QueryLogin(u);
+            Usuario usuario = ub.QueryLogin(user);
             if(usuario != null)
             {
-                ViewBag.Mensagem = "Voce esta logado!";
-                HttpContext.Session.SetInt32("idUsuario", usuario.Id);//foi criado sessao para id;
-                HttpContext.Session.SetString("nomeUsuario", usuario.Nome);//foi criado sessao para nome;
-                return View("Cadastro");
+                HttpContext.Session.SetInt32("idUsuario", usuario.Id);
+                HttpContext.Session.SetString("nomeUsuario", usuario.Nome);
+                 HttpContext.Session.SetInt32("tipoUsuario", usuario.Tipo);
+                return View();
             }
             else
             {
