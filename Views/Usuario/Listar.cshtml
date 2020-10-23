@@ -9,6 +9,7 @@
             <th>Login</th>
             <th>Senha</th>
             <th>Tipo</th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,10 @@
                <td>@i.Login</td>
                <td>@i.Senha</td>
                <td>@i.Tipo</td>
+               <td>
+                   <a href="/Usuario/Editar?Id=@i.Id">editar</a>
+                   <a href="/Usuario/Remover?Id=@i.Id">remover</a>
+               </td>
            </tr> 
         }
     </tbody>

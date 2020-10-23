@@ -23,7 +23,7 @@ namespace ProjetoFullStack.Controllers
         public IActionResult Listar()
         {
             if(HttpContext.Session.GetInt32("idUsuario")==null)
-                return RedirectToAction("Login","usuario");
+                return RedirectToAction("Login","Usuario");
 
             ProdutosBanco pb = new ProdutosBanco();
             List<Produtos> listar = pb.BuscarTodos();
