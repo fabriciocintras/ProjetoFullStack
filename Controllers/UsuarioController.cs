@@ -28,6 +28,24 @@ namespace ProjetoFullStack.Controllers
             List<Usuario> listar = ub.Query();
             return View(listar);
         }
+        public IActionResult Editar(int Id)
+        {
+            UsuarioBanco ub = new UsuarioBanco();
+            Usuario usuario = ub.ConsultaPorId(Id);
+            return View();
+        }
+        public IActionResult Gravar(Usuario usuario)
+        {
+            UsuarioBanco ub = new UsuarioBanco();
+            ub.Atualizar(usuario);
+            return RedirectToAction("Listar");
+        }
+        public IActionResult Remover(int Id)
+        {
+            UsuarioBanco ub = new UsuarioBanco();
+            ub.Remover(Id);
+            return RedirectToAction("Listar");
+        }
         public IActionResult Login()
         {
             return View();

@@ -14435,6 +14435,11 @@
       "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\cadastro.cshtml",
       "TargetPath": "Views\\Usuario\\cadastro.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Editar.cshtml",
+      "TargetPath": "Views\\Usuario\\Editar.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

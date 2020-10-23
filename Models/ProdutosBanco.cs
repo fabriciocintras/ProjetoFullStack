@@ -24,7 +24,7 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
             conexao.Open();
-            string sql = "select * from Produto order by Nome";
+            string sql = "select Produto.*, Usuario.Nome as NomeUsuario from Produto left join Usuario on Produto.Usuario = Usuario.Id";
             MySqlCommand comando = new MySqlCommand(sql,conexao);
             MySqlDataReader reader = comando.ExecuteReader();
             List<Produtos> lista = new List<Produtos>();
@@ -36,6 +36,8 @@ namespace ProjetoFullStack.Models
                         pr.Nome = reader.GetString("Nome");
                     if(!reader.IsDBNull(reader.GetOrdinal("Valor")))
                         pr.Valor = reader.GetDouble("Valor");
+                    if(!reader.IsDBNull(reader.GetOrdinal("NomeUsuario")))
+                        pr.Usuario = reader.GetString("NomeUsuario");
                     lista.Add(pr);
                 }
                 conexao.Close();
