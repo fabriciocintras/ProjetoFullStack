@@ -1,0 +1,21 @@
+@model Produtos
+@{
+ViewData["Title"]="Editar Produtos";
+}
+<h2>Editar Produtos</h2> 
+    <p id="">@ViewBag.Mensagem</p> 
+    <form asp-action="Gravar" method="POST">      
+        <p> 
+            <input type="hidden" asp-for="Id">        
+            <label asp-for="Nome">Nome:</label>         
+            <input asp-for="Nome" />     
+        </p>     
+        <p>         
+            <label asp-for="Valor">Valor:</label>         
+            <input asp-for="Valor" />     
+        </p>     
+      
+        <p>         
+            <input type="submit" value="Cadastrar" />     
+        </p> 
+    </form> 

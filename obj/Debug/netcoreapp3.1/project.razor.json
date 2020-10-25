@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Editar.cshtml",
+      "TargetPath": "Views\\Produtos\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

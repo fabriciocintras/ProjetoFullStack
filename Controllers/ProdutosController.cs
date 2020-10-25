@@ -18,6 +18,7 @@ namespace ProjetoFullStack.Controllers
             ProdutosBanco pbanco = new ProdutosBanco();
             int id = (int)HttpContext.Session.GetInt32("idUsuario");
             pbanco.Inserir(produto,id);
+            ViewBag.Mensagem="Produto Cadastrado com exito!";
             return View();
         }
         public IActionResult Listar()
@@ -29,5 +30,25 @@ namespace ProjetoFullStack.Controllers
             List<Produtos> listar = pb.BuscarTodos();
             return View(listar);
         }
+
+        public IActionResult Editar(int Id)
+        {
+            ProdutosBanco pb = new ProdutosBanco();
+            Produtos produto = pb.ConsultaPorId(Id);
+            return View();
+        }
+        public IActionResult Gravar(Produtos produto)
+        {
+            ProdutosBanco pb = new ProdutosBanco();
+            pb.Atualizar(produto);
+            return RedirectToAction("Listar");
+        }
+        public IActionResult Remover(int Id)
+        {
+            ProdutosBanco pb = new ProdutosBanco();
+            pb.Remover(Id);
+            return RedirectToAction("Listar");
+        }
+
     }
 }

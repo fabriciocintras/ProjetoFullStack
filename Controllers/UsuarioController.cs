@@ -17,7 +17,7 @@ namespace ProjetoFullStack.Controllers
         public IActionResult Cadastro(Usuario usuario){
             UsuarioBanco ub = new UsuarioBanco();
             ub.Inserir(usuario);
-            ViewBag.Mensagem="Usuario Cadastrado";
+            ViewBag.Mensagem="Usuario Cadastrado com exito!";
             return View();
         }
         public IActionResult Listar()
