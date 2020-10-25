@@ -41,13 +41,13 @@ namespace ProjetoFullStack.Controllers
         {
             ProdutosBanco pb = new ProdutosBanco();
             pb.Atualizar(produto);
-            return RedirectToAction("Listar","Produtos");
+            return RedirectToAction("Listar");
         }
         public IActionResult Remover(int Id)
         {
             ProdutosBanco pb = new ProdutosBanco();
             pb.Remover(Id);
-            return RedirectToAction("Listar","Produtos");
+            return RedirectToAction("Listar");
         }
 
     }
