@@ -51,7 +51,7 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
             conexao.Open();
-            string sql = "select * from usuario where Login = @Login and Senha = @Senha";
+            string sql = "select * from Usuario where Login = @Login and Senha = @Senha";
             MySqlCommand comando = new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@Login",u.Login);
             comando.Parameters.AddWithValue("@Senha",u.Senha);
@@ -105,7 +105,7 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
             conexao.Open();
-            string sql = "select * from usuario  where Id= @Id";
+            string sql = "select * from Usuario  where Id= @Id";
             MySqlCommand comando = new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@Id",Id);
             MySqlDataReader reader = comando.ExecuteReader();
