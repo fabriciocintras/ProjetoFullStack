@@ -14402,13 +14402,48 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Cadastro.cshtml",
+      "TargetPath": "Views\\Produtos\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Listar.cshtml",
+      "TargetPath": "Views\\Usuario\\Listar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Editar.cshtml",
+      "TargetPath": "Views\\Produtos\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Login.cshtml",
+      "TargetPath": "Views\\Usuario\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Listar.cshtml",
+      "TargetPath": "Views\\Produtos\\Listar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\cadastro.cshtml",
+      "TargetPath": "Views\\Usuario\\cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Editar.cshtml",
+      "TargetPath": "Views\\Usuario\\Editar.cshtml",
       "FileKind": "mvc"
     }
   ],

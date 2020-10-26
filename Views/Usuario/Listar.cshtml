@@ -1,0 +1,31 @@
+@model IEnumerable<Usuario>
+@{     ViewData["Title"] = "Listagem de Usuário"; } 
+<h2>Listagem de usuario</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Login</th>
+            <th>Senha</th>
+            <th>Tipo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Usuario i in Model)
+        {
+           <tr>
+               <td>@i.Id</td>
+               <td>@i.Nome</td>
+               <td>@i.Login</td>
+               <td>@i.Senha</td>
+               <td>@i.Tipo</td>
+               <td>
+                   <a href="/Usuario/Editar?Id=@i.Id">editar</a>
+                   <a href="/Usuario/Remover?Id=@i.Id">remover</a>
+               </td>
+           </tr> 
+        }
+    </tbody>
+</table>
