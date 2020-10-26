@@ -20,6 +20,7 @@ namespace ProjetoFullStack.Models
             Conexao.Close();
         }
 
+
         public List<Produtos> BuscarTodos()
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
