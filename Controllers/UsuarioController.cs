@@ -28,6 +28,7 @@ namespace ProjetoFullStack.Controllers
             List<Usuario> listar = ub.Query();
             return View(listar);
         }
+     
         public IActionResult Editar(int Id)
         {
             UsuarioBanco ub = new UsuarioBanco();

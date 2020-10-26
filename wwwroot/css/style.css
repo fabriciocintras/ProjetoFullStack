@@ -55,6 +55,22 @@ html,body{
     font-weight: 100;
     font-size: 1em;
 }
+.menuGerencia{
+    padding-top: 100px;position: fixed;
+}
+.menu-column{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;position: fixed;
+}
+.menu-column-links ul{
+    display: flex; 
+}
+.menu-column-links ul li{
+    padding: 0 10px;
+    list-style: none;
+}
 /*FIM DO MENU*/
 /*INICIO RODAPE*/
 .rodape{
