@@ -40,3 +40,5 @@ C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\ne
 C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
 C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listar.cshtml.g.cs
 C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Produtos\Editar.cshtml.g.cs
+C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Produtos\ListarColab.cshtml.g.cs
+C:\Users\Fabrício\Documents\repositorio local git\ProjetoFullStack\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ListarColab.cshtml.g.cs

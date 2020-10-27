@@ -52,25 +52,26 @@
                         </section>
                     </section>
                 }
+                  @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 0)
+                {
+                    <section class="menu-column menuGerencia">
+                        <section class="menu-column-links">
+                        <ul>
+                            <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
+                            <li ><a asp-controller="Usuario" asp-action="ListarColab" >Lista de Usuarios</a></li>
+                            <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
+                            <li ><a asp-controller="Produtos" asp-action="ListarColab" >Lista de Produtos</a></li>
+                        </ul>
+                        </section>
+                    </section>
+                }
                   
        
     </header>
     
     <div>
         <main>
-             @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1)
-                {
-                    <section class="menu-column menuGerencia">
-                        <section class="menu-column-links">
-                        <ul>
-                            <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
-                            <li ><a asp-controller="Usuario" asp-action="Listar" >Lista de Usuarios</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="Listar" >Lista de Produtos</a></li>
-                        </ul>
-                        </section>
-                    </section>
-                }
+           
                   
             @RenderBody()
         </main>

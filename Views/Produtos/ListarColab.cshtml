@@ -9,7 +9,8 @@
             <th>Quantidade</th>
             <th>Valor</th>
             <th>Usuario</th>
-            <th>Ações</th>
+            <th>Tipo</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -21,10 +22,7 @@
                <td>@i.Quantidade</td>
                <td>@i.Valor</td>
                <td>@i.Usuario</td>
-               <td>
-                   <a href="/Produtos/Editar?Id=@i.Id">editar</a>
-                   <a href="/Produtos/Remover?Id=@i.Id">remover</a>
-               </td>
+               
            </tr> 
         }
     </tbody>

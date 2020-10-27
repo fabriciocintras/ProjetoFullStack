@@ -35,6 +35,12 @@ namespace ProjetoFullStack.Controllers
             Usuario usuario = ub.ConsultaPorId(Id);
             return View();
         }
+        public IActionResult ListarColab()
+        { 
+            UsuarioBanco ub = new UsuarioBanco();
+            List<Usuario> listar = ub.Query();
+            return View(listar);
+        }
         public IActionResult Gravar(Usuario usuario)
         {
             UsuarioBanco ub = new UsuarioBanco();
