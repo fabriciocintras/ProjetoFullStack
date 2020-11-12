@@ -7,6 +7,7 @@
     <title>@ViewData["Title"] - ProjetoFullStack</title>
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/bannerPromocao.css">
+    <link rel="stylesheet" href="~/css/UsuarioListar.css">
     <link rel="stylesheet" href="~/css/faixaPromocao.css">
     <link rel="stylesheet" href="~/css/faixaMarcas.css">
     <link rel="stylesheet" href="~/css/produtoDetalhe.css">
@@ -23,10 +24,15 @@
         <nav class="navegacao">
             <ul>
                 <li class="logo">Fabricio Alves</li>
-                <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
+            </ul>
+
+            <ul>
+                 <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
+            </ul>
+
+            <ul>
                 <li ><a asp-controller="Home" asp-action="Index">home</a></li>
-                <li ><a asp-controller="Home" asp-action="" >produtos</a></li>
-                <li ><a asp-controller="Home" asp-action="" >fale conosco</a></li>
+                <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
                 <li ><a asp-controller="Usuario" asp-action="Login" >Login</a></li>
                 <li>
                     @if(Context.Session.GetInt32("idUsuario") != null)
@@ -39,46 +45,47 @@
             </ul>
               
         </nav>
-         @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1)
+            @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1)
                 {
-                    <section class="menu-column menuGerencia">
-                        <section class="menu-column-links">
+        <div class="controle">
+                   
                         <ul>
                             <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
                             <li ><a asp-controller="Usuario" asp-action="Listar" >Lista de Usuarios</a></li>
                             <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
                             <li ><a asp-controller="Produtos" asp-action="Listar" >Lista de Produtos</a></li>
                         </ul>
-                        </section>
-                    </section>
+        </div>
                 }
-                  @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 0)
+              @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 0)
                 {
-                    <section class="menu-column menuGerencia">
-                        <section class="menu-column-links">
+        <div class="controle">
+                   
                         <ul>
                             <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
                             <li ><a asp-controller="Usuario" asp-action="ListarColab" >Lista de Usuarios</a></li>
                             <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="ListarColab" >Lista de Produtos</a></li>
+                            <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >Lista de Produtos</a></li>
                         </ul>
-                        </section>
-                    </section>
+        </div>
                 }
+         
+                
                   
        
     </header>
     
     <div>
-        <main>
-           
-                  
+        <main>     
             @RenderBody()
         </main>
     </div>
 
      <footer class="rodape">
-        <p>Copyright ©2020 - 2020 www.fabricioalves.com.br, TODOS OS DIREITOS RESERVADOS</p>
+        <p>Copyright ©2020 - 2020</p>
+        
+            <li ><a asp-controller="Home" asp-action="" >fale conosco</a></li>
+        
     </footer>
 </body>
 </html>

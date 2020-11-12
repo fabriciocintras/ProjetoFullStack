@@ -30,7 +30,7 @@ namespace ProjetoFullStack.Controllers
             List<Produtos> listar = pb.BuscarTodos();
             return View(listar);
         }
-        public IActionResult ListarColab()
+        public IActionResult ListarProdutos()
         {
            ProdutosBanco pb = new ProdutosBanco();
             List<Produtos> listar = pb.BuscarTodos();

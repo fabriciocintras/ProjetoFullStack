@@ -1,0 +1,65 @@
+
+.imagemUsuario{
+    width: 80px;
+    height: 80px;
+    background: rgb(226, 225, 225);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius:50px ;
+}
+.idUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.nomeUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.loginUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.senhaUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.tipoUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.alteracoesUsuario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
