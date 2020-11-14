@@ -20,8 +20,8 @@
 </head>
 <body>
    <header>
-          
-        <nav class="navegacao">
+        @if(Context.Session.GetInt32("idUsuario") == null){
+             <nav class="navegacao">
             <ul>
                 <li class="logo">Fabricio Alves</li>
             </ul>
@@ -45,6 +45,34 @@
             </ul>
               
         </nav>
+        }  
+        @if(Context.Session.GetInt32("idUsuario") != null){
+             <nav class="navegacao">
+            <ul>
+                <li class="logo">Fabricio Alves</li>
+            </ul>
+
+            <ul>
+                 <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
+            </ul>
+
+            <ul>
+                <li ><a asp-controller="Home" asp-action="Index">home</a></li>
+                <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
+                <li>
+                    @if(Context.Session.GetInt32("idUsuario") != null)
+                {
+                <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
+                }
+                </li>
+                
+                <li ><a asp-controller="" asp-action="" >Carrinho</a></li>
+            </ul>
+              
+        </nav>
+        }  
+       
+            
             @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1)
                 {
         <div class="controle">
@@ -82,10 +110,7 @@
     </div>
 
      <footer class="rodape">
-        <p>Copyright ©2020 - 2020</p>
-        
-            <li ><a asp-controller="Home" asp-action="" >fale conosco</a></li>
-        
+        <p>Copyright ©2020 - 2020</p>   
     </footer>
 </body>
 </html>
