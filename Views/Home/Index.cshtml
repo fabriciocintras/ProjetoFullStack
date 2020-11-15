@@ -1,24 +1,17 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "HomePage";
 }
 
 
-        <div id="bannerPromocao">
-           
-            <div id="LinkParaOsProdutosEmOfertaDoBanner">
-                <h3>PRODUTOS COM ATE</h3>
-                <h1>70% OFF</h1>
-                <button id="botaoBannerPromocao">APROVEITE ></button>
-            </div>
+    <div id="bannerPromocao">
+        <div id="LinkParaOsProdutosEmOfertaDoBanner">
+            <h3>PRODUTOS COM ATE</h3>
+            <h1>70% OFF</h1>
+            <button id="botaoBannerPromocao">APROVEITE ></button>
         </div>
-        <section class="containerGeral">
-
+    </div>
+    <section class="containerGeral">
         <div id="faixaPromocao">
-
-            <div class="tituloEsquerda">
-                <h2>Nossas Ofertas</h2>
-            </div>
-            
             <div class="boxPromocao">
                 <div id="boxPromocaoIconeCamisa">
                     <img src="/img/037-tshirt.png" alt="">
@@ -44,26 +37,35 @@
                 </div>  
             </div>
         </div>
-
-        <div id="faixaCategoria">
-
-        </div>
-
-        <!----------------------------------->
-
-        <div id="faixaMarcas">
-
-            <div class="tituloEsquerda">
-                <h2>Nossas Marcas</h2>
+        <div class="faixaCategoria">
+            <div class="centralizarEAlinha">
+                <div class="boxFaixaCategoria">
+                    <h2>MASCULINO</h2>
+                </div>
+                <div class="boxFaixaCategoria">
+                    <h2>FEMININO</h2>
+                </div>
+                <div class="boxFaixaCategoria">
+                   <h2 class="">INFANTIL</h2> 
+                </div>
             </div>
-
+        </div>
+        <div class="containerGeral">
+            <div class="newslatter">
+                <form asp-action="" method="POST">
+                    <p>
+                        <input type="text">
+                        <input type="button">
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div id="faixaMarcas">
             <div class="containerdasMarcas">
                 <div class="circuloDeMarca"><a href=""><img src="/img/1280px-Adidas_Logo.svg.png" alt=""></a></div>
                 <div class="circuloDeMarca"><a href=""><img src="/img/Nike-symbol-vector-400x400.png" alt=""></a></div>
                 <div class="circuloDeMarca"><a href=""><img src="/img/Oakley_logo.svg.png" alt=""></a></div>
                 <div class="circuloDeMarca"><a href=""><img src="/img/quiksilver-logo-1.png" alt=""></a></div>
             </div>
-
         </div>
-
     </section>

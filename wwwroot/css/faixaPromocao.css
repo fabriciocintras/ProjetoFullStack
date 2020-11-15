@@ -1,26 +1,16 @@
-html,body{
-    padding: 0; margin: 0;box-sizing: border-box;font-family: 'Roboto', sans-serif;
-}
-h1,h2,h3,p{
-    padding: 0;
-    margin: 0;
-}
-
 #faixaPromocao{
     max-width: 100%;
     height: auto;
     background: rgb(255, 255, 255);
     display: flex;
-    padding: 10px 0;
     flex-wrap: wrap;
 }
 .boxPromocao{
-    
+    margin: 5px 0;
     display: flex;
-    height: 150px;
+    height: 80px;
     width: 33%;
-    background: #fffffff3;justify-content: center;
-    padding: 10px 0;
+    background: #fffffff3;justify-content: center;cursor: pointer;
 }
 #boxPromocaoIconeCamisa img{
     max-width: 20%;
@@ -38,7 +28,7 @@ h1,h2,h3,p{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-right:1px solid black;
+    border-right:1px solid rgba(53, 52, 52, 0.459);
 }
 
 #boxPromocaoIconesapato img{
@@ -57,14 +47,15 @@ h1,h2,h3,p{
     justify-content: flex-start;
     align-items: center;
     padding-left:5px;
-    border-right:1px solid black;
+    border-right:1px solid rgba(53, 52, 52, 0.459);
+
 }
 #boxPromocaoTextoLeveMaisPagueMenos{
     width: 50%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left:5px ;
+    
 }
 
 #boxPromocaoIconeLeveMaisPagueMenos img{

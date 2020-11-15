@@ -11,106 +11,83 @@
     <link rel="stylesheet" href="~/css/faixaPromocao.css">
     <link rel="stylesheet" href="~/css/faixaMarcas.css">
     <link rel="stylesheet" href="~/css/produtoDetalhe.css">
-    <link rel="stylesheet" href="~/css/faleconosco.css">
     <link rel="stylesheet" href="~/css/produtos.css">
-     <link rel="stylesheet" href="~/css/carrinho.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
-     <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="~/css/site.css" />-->
 </head>
 <body>
    <header>
         @if(Context.Session.GetInt32("idUsuario") == null){
-             <nav class="navegacao">
-            <ul>
-                <li class="logo">Fabricio Alves</li>
-            </ul>
-
-            <ul>
-                 <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
-            </ul>
-
-            <ul>
-                <li ><a asp-controller="Home" asp-action="Index">home</a></li>
-                <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
-                <li ><a asp-controller="Usuario" asp-action="Login" >Login</a></li>
-                <li>
+            <nav class="navegacao">
+                <ul>
+                    <li class="logo">Fabricio Alves</li>
+                </ul>
+                <ul>
+                    <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
+                </ul>
+                <ul>
+                    <li ><a asp-controller="Home" asp-action="Index">home</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
+                    <li ><a asp-controller="Usuario" asp-action="Login" >Login</a></li>
+                    <li>
                     @if(Context.Session.GetInt32("idUsuario") != null)
-                {
-                <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
-                }
-                </li>
-                
-                <li ><a asp-controller="" asp-action="" >Carrinho</a></li>
-            </ul>
+                    {
+                        <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
+                    }
+                    </li>
+                </ul>
               
-        </nav>
+            </nav>
         }  
         @if(Context.Session.GetInt32("idUsuario") != null){
-             <nav class="navegacao">
-            <ul>
-                <li class="logo">Fabricio Alves</li>
-            </ul>
-
-            <ul>
-                 <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
-            </ul>
-
-            <ul>
-                <li ><a asp-controller="Home" asp-action="Index">home</a></li>
-                <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
-                <li>
-                    @if(Context.Session.GetInt32("idUsuario") != null)
-                {
-                <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
-                }
-                </li>
+            <nav class="navegacao">
+                <ul>
+                    <li class="logo">Fabricio Alves</li>
+                </ul>
+                <ul>
+                    <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
+                </ul>
+                <ul>
+                    <li ><a asp-controller="Home" asp-action="Index">home</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
+                    <li>
+                        @if(Context.Session.GetInt32("idUsuario") != null)
+                        {
+                            <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
+                        }
+                    </li>
                 
-                <li ><a asp-controller="" asp-action="" >Carrinho</a></li>
-            </ul>
+                    <li ><a asp-controller="" asp-action="" >Carrinho</a></li>
+                </ul>
               
-        </nav>
-        }  
-       
-            
-            @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1)
-                {
-        <div class="controle">
-                   
-                        <ul>
-                            <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
-                            <li ><a asp-controller="Usuario" asp-action="Listar" >Lista de Usuarios</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="Listar" >Lista de Produtos</a></li>
-                        </ul>
-        </div>
-                }
-              @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 0)
-                {
-        <div class="controle">
-                   
-                        <ul>
-                            <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
-                            <li ><a asp-controller="Usuario" asp-action="ListarColab" >Lista de Usuarios</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
-                            <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >Lista de Produtos</a></li>
-                        </ul>
-        </div>
-                }
-         
-                
-                  
-       
+            </nav>
+        }    
+        @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1){
+            <div class="controle">  
+                <ul>
+                    <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
+                    <li ><a asp-controller="Usuario" asp-action="Listar" >Lista de Usuarios</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="Listar" >Lista de Produtos</a></li>
+                </ul>
+            </div>
+        }
+        @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 0)
+        {
+            <div class="controle">
+                <ul>
+                    <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
+                    <li ><a asp-controller="Usuario" asp-action="ListarColab" >Lista de Usuarios</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >Lista de Produtos</a></li>
+                </ul>
+            </div>
+        }          
     </header>
-    
     <div>
         <main>     
             @RenderBody()
         </main>
     </div>
-
-     <footer class="rodape">
-        <p>Copyright ©2020 - 2020</p>   
-    </footer>
+    <footer class="rodape"></footer>
 </body>
 </html>

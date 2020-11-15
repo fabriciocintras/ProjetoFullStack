@@ -11,7 +11,7 @@
             <input type="e-mail" placeholder="Senha" asp-for="Senha">
             <button type="submit" class="btn">Entrar</button>
             <a  asp-controller="Usuario" asp-action="Cadastro">cadastrar usuario</a>
+            <p>@ViewBag.Mensagem</p>
         </div>
     </div>
 </form>
-<p>@ViewBag.Mensagem</p>
