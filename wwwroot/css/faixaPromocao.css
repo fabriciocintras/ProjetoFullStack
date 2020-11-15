@@ -8,20 +8,22 @@ h1,h2,h3,p{
 
 #faixaPromocao{
     max-width: 100%;
-    height: 150px;
+    height: auto;
     background: rgb(255, 255, 255);
     display: flex;
-    padding: 50px 0;
-    
+    padding: 10px 0;
+    flex-wrap: wrap;
 }
 .boxPromocao{
+    
     display: flex;
     height: 150px;
     width: 33%;
-    background: #fffffff3;
+    background: #fffffff3;justify-content: center;
+    padding: 10px 0;
 }
 #boxPromocaoIconeCamisa img{
-    max-width: 30%;
+    max-width: 20%;
 }
 #boxPromocaoIconeCamisa{
     width: 50%;
@@ -66,7 +68,7 @@ h1,h2,h3,p{
 }
 
 #boxPromocaoIconeLeveMaisPagueMenos img{
-    width: 30%;
+    width: 20%;
 }
 #boxPromocaoIconeLeveMaisPagueMenos{
     width: 50%;

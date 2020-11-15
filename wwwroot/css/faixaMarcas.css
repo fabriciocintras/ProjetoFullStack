@@ -8,18 +8,12 @@ html,body{
     flex-direction: column;
     
 }
-#faixaMarcas h1{
-    font-size: 28px;
-    padding: 20px 0;
-    width: 100%;
-    text-align: center;
 
-}
 .containerdasMarcas{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    width: 80%;
+    width: 100%;
     
 }
 .circuloDeMarca{

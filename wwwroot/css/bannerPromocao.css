@@ -14,16 +14,7 @@ html,body{
     background-position: center;
     background-size: cover;
 }
-#linkParaOFreteGratis{
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    align-items: flex-start;
-    
-    text-align: center;
-    background-color: #FCF6B1;
-}
+
 
 #LinkParaOsProdutosEmOfertaDoBanner{
     display: flex;
@@ -40,13 +31,15 @@ html,body{
     border: none;
     color: wheat;
     font-weight: bolder;
-    background: #000;
+    background: rgb(49, 49, 49);
 }
 #LinkParaOsProdutosEmOfertaDoBanner h3{
     font-size: 40px;
     font-weight: 500;
+    color: rgb(29, 28, 28);
 }
 #LinkParaOsProdutosEmOfertaDoBanner h1{
+    color: rgb(27, 27, 27);
     font-size: 100px;
     font-weight: 700;
 }
