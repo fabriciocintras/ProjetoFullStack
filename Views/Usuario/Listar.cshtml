@@ -1,31 +1,46 @@
 @model IEnumerable<Usuario>
 @{     ViewData["Title"] = "Listagem de Usuário"; } 
 <h2>Listagem de usuario</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Login</th>
-            <th>Senha</th>
-            <th>Tipo</th>
-            <th>Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Usuario i in Model)
-        {
-           <tr>
-               <td>@i.Id</td>
-               <td>@i.Nome</td>
-               <td>@i.Login</td>
-               <td>@i.Senha</td>
-               <td>@i.Tipo</td>
-               <td>
-                   <a href="/Usuario/Editar?Id=@i.Id">editar</a>
-                   <a href="/Usuario/Remover?Id=@i.Id">remover</a>
+
+<div class="container">
+        <div class="box">
+            <div class="tituloSessao">Produtos</div>
+
+            <div class="grade">
+                @foreach (Usuario u in Model)
+                {
+                <div class="conteudo">
+                    <div class="imagemUsuario">
+                        
+                    </div>
+                    <div class="idUsuario">
+                        @u.Id
+                    </div>
+                    <div class="nomeUsuario">
+                        @u.Nome
+                    </div>
+                    <div class="loginUsuario">
+                        @u.Login
+                    </div>
+                    <div class="senhaUsuario">
+                        @u.Senha
+                    </div>
+                    <div class="tipoUsuario">
+                        @u.Tipo
+                    </div>
+                    <div>
+                         <td>
+                   <a href="/Usuario/Editar?Id=@u.Id">editar</a>
+                   <span> | </span>
+                   <a href="/Usuario/Remover?Id=@u.Id">remover</a>
                </td>
-           </tr> 
-        }
-    </tbody>
-</table>
+                    </div>
+                   
+                </div>
+                    
+                }
+                
+            </div>
+        </div>
+       
+    </div>

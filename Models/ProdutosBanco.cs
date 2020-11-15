@@ -11,9 +11,10 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection Conexao = new MySqlConnection(dadosConexao);
             Conexao.Open();
-            string query = "insert into Produto(Nome, Valor, usuario) value(@Nome, @Valor, @Usuario)";
+            string query = "insert into Produto(Nome, Valor,Quantidade, usuario) value(@Nome,@Quantidade, @Valor, @Usuario)";
             MySqlCommand comando = new MySqlCommand(query,Conexao);
             comando.Parameters.AddWithValue("@Nome",produtos.Nome);
+            comando.Parameters.AddWithValue("@Quantidade",produtos.Quantidade);
             comando.Parameters.AddWithValue("@Valor", produtos.Valor);
             comando.Parameters.AddWithValue("@Usuario", idUsuario);
             comando.ExecuteNonQuery();
@@ -35,6 +36,8 @@ namespace ProjetoFullStack.Models
                     pr.Id = reader.GetInt32("Id");
                     if(!reader.IsDBNull(reader.GetOrdinal("Nome")))
                         pr.Nome = reader.GetString("Nome");
+                     if(!reader.IsDBNull(reader.GetOrdinal("Quantidade")))
+                        pr.Quantidade = reader.GetInt32("Quantidade");
                     if(!reader.IsDBNull(reader.GetOrdinal("Valor")))
                         pr.Valor = reader.GetDouble("Valor");
                     if(!reader.IsDBNull(reader.GetOrdinal("NomeUsuario")))
@@ -49,9 +52,10 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
             conexao.Open();
-            string sql = "update Produto set Nome = @Nome, Valor = @Valor" ;
+            string sql = "update Produto set Nome = @Nome, Quantidade = @Quantidade, Valor = @Valor" ;
             MySqlCommand comando = new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@Nome",produtos.Nome);
+            comando.Parameters.AddWithValue("@Quantidade",produtos.Quantidade);
             comando.Parameters.AddWithValue("@Valor",produtos.Valor);
             comando.ExecuteNonQuery();
             conexao.Close();
@@ -84,6 +88,8 @@ namespace ProjetoFullStack.Models
                 
                 if(!reader.IsDBNull(reader.GetOrdinal("Nome")))
                     pr.Nome = reader.GetString("Nome");
+                 if(!reader.IsDBNull(reader.GetOrdinal("Quantidade")))
+                    pr.Quantidade = reader.GetInt32("Quantidade");
                 if(!reader.IsDBNull(reader.GetOrdinal("Valor")))
                     pr.Valor = reader.GetDouble("Valor");
                
