@@ -1,7 +1,7 @@
 @model Usuario
-@{     ViewData["Title"] = "Login"; }
-<div class="containerGeeral">
- <form asp-action="Cadastro" method="POST">      
+@{     ViewData["Title"] = "cadastro usuario"; }
+<div class="containerGeral"style="padding-top:100px;">
+ <form asp-action="cadastroCliente" method="POST">      
         <p>         
             <label asp-for="Nome">Nome:</label>         
             <input asp-for="Nome" />     
@@ -15,10 +15,9 @@
             <input asp-for="Senha" type="password"/>     
         </p> 
         <p>         
-            <label asp-for="Tipo">Tipo de conta:</label>         
-            <select asp-for="Tipo" id="">
-                <option value="0">ADMINISTRADOR</option>
-                <option value="1">COLABORADOR</option>
+            <label asp-for="Tipo" >Tipo de conta:</label>         
+            <select asp-for="Tipo" id="" >
+                <option value="2" >CLIENTE</option>
             </select>    
         </p>     
         <p>         

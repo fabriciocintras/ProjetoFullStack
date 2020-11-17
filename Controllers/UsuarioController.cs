@@ -13,6 +13,18 @@ namespace ProjetoFullStack.Controllers
                 return RedirectToAction("Login");
             return View();
         }
+        public IActionResult cadastroCliente()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult cadastroCliente(Usuario u)
+        {
+            UsuarioBanco ub = new UsuarioBanco();
+            ub.Inserir(u);
+            ViewBag.Mensagem="Usuario Cadastrado com Sucesso!";
+            return View();
+        }
         [HttpPost]
         public IActionResult Cadastro(Usuario usuario){
             UsuarioBanco ub = new UsuarioBanco();
@@ -57,8 +69,31 @@ namespace ProjetoFullStack.Controllers
         {
             return View();
         }
+        public IActionResult LoginCliente()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Login(Usuario user)
+        {
+            UsuarioBanco ub = new UsuarioBanco();
+            Usuario usuario = ub.QueryLogin(user);
+            if(usuario != null)
+            {
+                HttpContext.Session.SetInt32("idUsuario", usuario.Id);
+                HttpContext.Session.SetString("nomeUsuario", usuario.Nome);
+                 HttpContext.Session.SetInt32("tipoUsuario", usuario.Tipo);
+                return View();
+            }
+            else
+            {
+                ViewBag.Mensagem = "Falha Login!";
+                return View();
+            }
+
+        }
+        [HttpPost]
+        public IActionResult LoginCliente(Usuario user)
         {
             UsuarioBanco ub = new UsuarioBanco();
             Usuario usuario = ub.QueryLogin(user);

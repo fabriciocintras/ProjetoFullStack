@@ -16,6 +16,8 @@
 </head>
 <body>
    <header>
+       <!--ACESSO SEM LOGIN-->
+
         @if(Context.Session.GetInt32("idUsuario") == null){
             <nav class="navegacao">
                 <ul>
@@ -27,19 +29,13 @@
                 <ul>
                     <li ><a asp-controller="Home" asp-action="Index">home</a></li>
                     <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
-                    <li ><a asp-controller="Usuario" asp-action="Login" >Login</a></li>
-                    <li>
-                    @if(Context.Session.GetInt32("idUsuario") != null)
-                    {
-                        <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
-                    }
-                    </li>
+                    <li ><a asp-controller="Usuario" asp-action="LoginCliente" >Login</a></li>
                 </ul>
               
             </nav>
         }  
-        @if(Context.Session.GetInt32("idUsuario") != null){
-            <nav class="navegacao">
+       @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") ==2){
+             <nav class="navegacao">
                 <ul>
                     <li class="logo">Fabricio Alves</li>
                 </ul>
@@ -50,18 +46,38 @@
                     <li ><a asp-controller="Home" asp-action="Index">home</a></li>
                     <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
                     <li>
-                        @if(Context.Session.GetInt32("idUsuario") != null)
-                        {
-                            <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
-                        }
+                    @if(Context.Session.GetInt32("idUsuario") != null)
+                    {
+                        <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
+                    }
                     </li>
-                
-                    <li ><a asp-controller="" asp-action="" >Carrinho</a></li>
                 </ul>
               
             </nav>
-        }    
-        @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 1){
+        }
+
+        <!--ACESSO COM LOGIN (COLABORADOR)-->
+        
+        @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario")!=2){
+              <nav class="navegacao">
+                <ul>
+                    <li class="logo">Fabricio Alves</li>
+                </ul>
+                <ul>
+                    <li><input type="text" placeholder="pesquise seu produto" class="inputmenu"></li>
+                </ul>
+                <ul>
+                    <li ><a asp-controller="Home" asp-action="Index">home</a></li>
+                    <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >produtos</a></li>
+                    <li>
+                    @if(Context.Session.GetInt32("idUsuario") != null)
+                    {
+                        <span>Olá @Context.Session.GetString("nomeUsuario")<a asp-controller="Usuario" asp-action="Logout"> sair </a></span>
+                    }
+                    </li>
+                </ul>
+              
+            </nav>
             <div class="controle">  
                 <ul>
                     <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
@@ -71,17 +87,9 @@
                 </ul>
             </div>
         }
-        @if(Context.Session.GetInt32("idUsuario") != null && Context.Session.GetInt32("tipoUsuario") != 0)
-        {
-            <div class="controle">
-                <ul>
-                    <li ><a asp-controller="Usuario" asp-action="cadastro">Cadastro de Usuarios</a></li>
-                    <li ><a asp-controller="Usuario" asp-action="ListarColab" >Lista de Usuarios</a></li>
-                    <li ><a asp-controller="Produtos" asp-action="Cadastro" >Cadastro de Produtos</a></li>
-                    <li ><a asp-controller="Produtos" asp-action="ListarProdutos" >Lista de Produtos</a></li>
-                </ul>
-            </div>
-        }          
+
+        
+      
     </header>
     <div>
         <main>     
