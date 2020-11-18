@@ -11,7 +11,8 @@ html,body{
 /*INICIO DO MENU*/
 .containerGeral
 {
-    width: 100%;margin: 0 auto;display: flex;flex-direction: column;flex-wrap: wrap;
+    width: 100%; 
+    display: flex;flex-direction: column;flex-wrap: wrap;justify-content: center;align-items: center;margin: 0 auto;
 }
 .navegacao{
 position: relative;
@@ -127,6 +128,9 @@ position: relative;
     color: blanchedalmond;
     cursor: pointer;
 }
+.boxFaixaCategoria:hover{
+    background: #2D1E2F;
+}
 .rodape{
     width: 100%;
     height: 100px;
@@ -138,3 +142,26 @@ position: relative;
     font-size: 14px;
 }
 /*LOGIN E CADASTRO*/
+.newslatter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;background-image: url(/img/newslatter.jpg);
+    background-position: center;
+    background-size: auto;
+    width: 80%;
+    padding: 40px 40px;
+    margin: 20px 0;
+}
+.newslatter input{
+    border: 1px solid rgba(0, 0, 0, 0.589);
+    background: white;
+    color: rgb(27, 27, 27);
+    padding: 10px 10px;
+    
+    font-size: 16px;
+}
+.container{
+    width: 100%;display: flex;justify-content: center;align-items: center;
+}
+.c

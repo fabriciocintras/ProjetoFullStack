@@ -1,21 +1,23 @@
 @model Usuario
-@{     
-    ViewData["Title"] = "Listagem de Usuário"; 
-} 
-<div class="containerGeral">
-    <form method="POST" class="formularioLogin">
-        <h1>Login</h1>
-            <div>
-                <input type="text" placeholder="Login" asp-for="Login">
-                <input type="e-mail" placeholder="Senha" asp-for="Senha">
-                <button type="submit" class="btn">Entrar</button>
-                <a  asp-controller="Usuario" asp-action="CadastroCliente">cadastrar usuario</a>
-                <p>@ViewBag.Mensagem</p>
-            </div>
-    </form>
+@{     ViewData["Title"] = "Login"; }
 
+    <div class="containerGeral"style="height:100vh">
+        <p>@ViewBag.Mensagem</p>
+        <form asp-action="LoginCliente" method="POST" class="loginForm">
+            <P>
+               <h1> FAÇA O LOGIN</h1>
+            </P>
+            <p>
+                <input type="text" asp-for="Login" placeholder="Login" size="50">
+            </p>
+            <p>
+                <input type="text" asp-for="Senha" placeholder="Senha" size="50">
+            </p>
+            <p><a href="">Esqueceu sua senha?</a></p>
+            <p>
+                <input type="submit" value="ACESSAR CONTA" class="botaoLogin">
+            </p>
+            
+        </form>
+    </div>
    
-
-    
-
-</div>
