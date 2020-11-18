@@ -3,23 +3,31 @@
 ViewData["Title"]="Editar Produtos";
 }
 <h2>Editar Produtos</h2> 
-    <p id="">@ViewBag.Mensagem</p> 
-    <form asp-action="Gravar" method="POST">      
-        <p> 
-            <input type="hidden" asp-for="Id">        
-            <label asp-for="Nome">Nome:</label>         
-            <input asp-for="Nome" />     
+
+
+    <div class="containerGeral" style="height:100vh">
+        <p>@ViewBag.Mensagem</p>
+        <form  asp-action="Gravar" method="POST" class="loginForm">
+            <P>
+               <h1> Editar</h1>
+            </P>
+           <p> 
+            <input type="hidden" asp-for="Id">          
+            <input asp-for="Nome"  placeholder="Nome">     
         </p>     
           <p>         
-            <label asp-for="Quantidade">Quantidade:</label>         
-            <input asp-for="Quantidade" />     
+                   
+            <input asp-for="Quantidade" placeholder="Quantidade">     
         </p>    
-        <p>         
-            <label asp-for="Valor">Valor:</label>         
-            <input asp-for="Valor" />     
+        <p>              
+            <input asp-for="Valor"  placeholder="Valor">     
         </p>     
       
         <p>         
             <input type="submit" value="Cadastrar" />     
         </p> 
-    </form> 
+        
+        </form>
+         <p id="">@ViewBag.Mensagem</p>
+     
+    </div>

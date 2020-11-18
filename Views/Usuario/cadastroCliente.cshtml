@@ -1,27 +1,33 @@
 @model Usuario
 @{     ViewData["Title"] = "cadastro usuario"; }
-<div class="containerGeral"style="padding-top:100px;">
- <form asp-action="cadastroCliente" method="POST">      
-        <p>         
-            <label asp-for="Nome">Nome:</label>         
-            <input asp-for="Nome" />     
-        </p>     
-        <p>         
-            <label asp-for="Login">Login:</label>         
-            <input asp-for="Login" />     
-        </p>     
-        <p>         
-            <label asp-for="Senha">Senha:</label>         
-            <input asp-for="Senha" type="password"/>     
-        </p> 
-        <p>         
+
+  <div class="containerGeral"style="height:100vh">
+        <p>@ViewBag.Mensagem</p>
+        <form asp-action="cadastroCliente" method="POST" class="loginForm">
+            <P>
+               <h1> Cadastro de usuario:
+               </h1>
+            </P>
+            <p>
+                <input type="text" asp-for="Nome" placeholder="Nome" size="50">
+            </p>
+            <p>
+                <input type="text" asp-for="Login" placeholder="Login" size="50">
+            </p>
+             <p>
+                <input type="text" asp-for="Senha" placeholder="Senha" size="50">
+            </p>
+             <p>         
             <label asp-for="Tipo" >Tipo de conta:</label>         
             <select asp-for="Tipo" id="" >
                 <option value="2" >CLIENTE</option>
             </select>    
-        </p>     
-        <p>         
-            <input type="submit" value="Cadastrar" />     
-        </p> 
-    </form> 
-</div>
+        </p>    
+            <p>
+                <input type="submit" value="CADASTRAR" class="botaoLogin">
+            </p>
+            
+        </form>
+    </div>
+   
+
