@@ -7,15 +7,15 @@ ViewData["Title"]="Cadastro do Produtos";
         <form asp-action="Cadastro"method="POST" class="loginForm">
         <h1> CADASTRO DE PRODUTO</h1>        
            <p>
-            <input asp-for="Nome"  placeholder="Nome">     
+            <input asp-for="Nome"  placeholder="Nome" size="50">     
         </p>     
         <p>          
-            <input asp-for="Valor"  placeholder="Valor">     
+            <input asp-for="Valor"  placeholder="Valor" size="50">     
         </p>      
         <p>                 
-            <input asp-for="Quantidade"  placeholder="Quantidade">     
+            <input asp-for="Quantidade"  placeholder="Quantidade" size="50">     
         </p>      
-            <input type="submit" value="Cadastrar" />     
+            <input type="submit" value="Cadastrar" class="botaoLogin"/>     
         </p> 
         </form>
          <p id="">@ViewBag.Mensagem</p>
