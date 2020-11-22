@@ -82,8 +82,8 @@ namespace ProjetoFullStack.Controllers
             {
                 HttpContext.Session.SetInt32("idUsuario", usuario.Id);
                 HttpContext.Session.SetString("nomeUsuario", usuario.Nome);
-                 HttpContext.Session.SetInt32("tipoUsuario", usuario.Tipo);
-                return View();
+                HttpContext.Session.SetInt32("tipoUsuario", usuario.Tipo);
+                return RedirectToAction("Index","Home");
             }
             else
             {
@@ -102,7 +102,7 @@ namespace ProjetoFullStack.Controllers
                 HttpContext.Session.SetInt32("idUsuario", usuario.Id);
                 HttpContext.Session.SetString("nomeUsuario", usuario.Nome);
                  HttpContext.Session.SetInt32("tipoUsuario", usuario.Tipo);
-                return View();
+                return RedirectToAction("Index","Home");
             }
             else
             {

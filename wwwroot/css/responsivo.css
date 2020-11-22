@@ -2,14 +2,16 @@
     display: none;
 }
 #abrirMenu{
-    position: fixed;z-index: 1000;position: relative;
     display: none;
-    width: 100%;
-    height: 80px;
+    position: fixed;
+    position: relative;
+    z-index: 1000;
+    padding: 15px;
 }
 #abrirMenu img{
+    margin: 0 auto;
+    position: fixed;
     width: 18px;
-    height: 80px;
 }
 @media(max-width:600px){
 
@@ -43,7 +45,7 @@
         border: none;
     }
     .btnMenu img{
-        width: 40px;
+        width: 40px;display: flex;
     }
     #menuResponsivo ul{
         display: flex;
@@ -57,6 +59,11 @@
     }
     #abrirMenu{
         display: flex;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        background-color:#2D1E2F ;
+        position: fixed;
     }
     .contextSession{
         color: white;
@@ -96,6 +103,43 @@
         text-decoration: none;
         font-size: 19px;
 
+    }
+    /*margem do topo*/
+    .margemDoTopo{
+        padding-top: 0;
+        height: 80vh;
+    }
+    .divisaoRodape{
+       
+        min-width: 100%;
+        
+    }
+    /*produto*/
+    .box{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .grade{
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .conteudo{
+        display: flex;
+        min-width: 30%;
+        height: auto;
+        margin:0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 0px;
     }
     
 

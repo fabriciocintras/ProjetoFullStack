@@ -4,22 +4,16 @@
        
 <div class="container ">
         <div class="box">
-                <h1>LISTA DE PRODUTOS</h1>
+            <h1>LISTA DE PRODUTOS</h1>
             <div class="grade">
-                    @foreach (Produtos i in Model)
-                    {
+                @foreach (Produtos i in Model)
+                {
                     <div class="conteudo">
-                        <div class="imagemConteudo"> 
-                        </div>
-                        <div class="tituloConteudo">
-                            @i.Nome
-                        </div>
-                        <div class="valorConteudo">
-                            @i.Valor
-                        </div>
+                        <div class="imagemConteudo"></div>
+                        <div class="tituloConteudo">@i.Nome</div>
+                        <div class="valorConteudo"> @i.Valor</div>
                     </div>
                 } 
             </div>
-        </div>
-       
-    </div>
+        </div>   
+</div>
