@@ -1,4 +1,7 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.getElementById("abrirMenu").onclick = function(){
+    document.querySelector("#menuResponsivo").classList.add("show");
+}
 
-// Write your JavaScript code.
+document.getElementById("sairMenu").onclick = function(){
+    document.querySelector("#menuResponsivo").classList.remove("show");
+}

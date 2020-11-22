@@ -2,22 +2,22 @@
 @{     ViewData["Title"] = "Produtos"; }
           
        
-<div class="container">
+<div class="container ">
         <div class="box">
-            <div class="tituloSessao">Produtos</div>
+                <h1>LISTA DE PRODUTOS</h1>
             <div class="grade">
-                @foreach (Produtos i in Model)
-                {
-                <div class="conteudo">
-                    <div class="imagemConteudo"> 
+                    @foreach (Produtos i in Model)
+                    {
+                    <div class="conteudo">
+                        <div class="imagemConteudo"> 
+                        </div>
+                        <div class="tituloConteudo">
+                            @i.Nome
+                        </div>
+                        <div class="valorConteudo">
+                            @i.Valor
+                        </div>
                     </div>
-                    <div class="tituloConteudo">
-                        @i.Nome
-                    </div>
-                    <div class="valorConteudo">
-                        @i.Valor
-                    </div>
-                </div>
                 } 
             </div>
         </div>

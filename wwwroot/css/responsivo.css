@@ -1,0 +1,103 @@
+#menuResponsivo{
+    display: none;
+}
+#abrirMenu{
+    position: fixed;z-index: 1000;position: relative;
+    display: none;
+    width: 100%;
+    height: 80px;
+}
+#abrirMenu img{
+    width: 18px;
+    height: 80px;
+}
+@media(max-width:600px){
+
+    #bannerPromocao{
+       position: absolute;top: 0;
+    }
+    .navegacao{
+        display: none;
+    }
+    #menuResponsivo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 90%;
+        height: 100vh;
+        background: #2b1f2c;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 1001;
+        transform: translate3d(-100%, 0, 0);
+        transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    }
+    #menuResponsivo.show{
+        transform: translate3d(0px,0,0);
+    }
+    .btnMenu{
+        width: 40px;
+        background: transparent;
+        border: none;
+    }
+    .btnMenu img{
+        width: 40px;
+    }
+    #menuResponsivo ul{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #menuResponsivo ul li a{
+        color:white;
+    }
+    #abrirMenu{
+        display: flex;
+    }
+    .contextSession{
+        color: white;
+    }
+    #sairMenu{
+        background: transparent;border: none;
+        font-weight: bolder;
+        font-size: 23px;
+        color: white;
+    }
+    .sair{
+        color: white;
+        text-decoration: none;
+        font-size: 19px;
+    }
+    .usuarioLogado{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;height: 80px;
+
+        background: rgb(43, 31, 44);
+    }
+    .listaMenuResponsivo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 100px;
+    }
+    .listaMenuResponsivo li{
+        padding-top: 10px;
+        list-style: none;
+    }
+    .listaMenuResponsivo li a{
+        text-decoration: none;
+        font-size: 19px;
+
+    }
+    
+
+}
+

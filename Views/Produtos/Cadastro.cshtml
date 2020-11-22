@@ -3,13 +3,10 @@
 ViewData["Title"]="Cadastro do Produtos";
 }
 
-    <div class="containerGeral" style="height:100vh">
-        <p>@ViewBag.Mensagem</p>
+    <div class="container" >
         <form asp-action="Cadastro"method="POST" class="loginForm">
-            <P>
-               <h1> CADASTRAR PRODUTO</h1>
-            </P>
-            <p>          
+        <h1> CADASTRO DE PRODUTO</h1>        
+           <p>
             <input asp-for="Nome"  placeholder="Nome">     
         </p>     
         <p>          

@@ -5,19 +5,31 @@
     color:#F7B32B amarelo
     color:#2D1E2F roxo escuro menu*/
 html,body{
-    padding: 0; margin: 0;box-sizing: border-box;font-family: 'Roboto', sans-serif;
+    padding: 0; margin: 0 auto;box-sizing: border-box;font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
 
-/*INICIO DO MENU*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
 .containerGeral
 {
     width: 100%; 
-    display: flex;flex-direction: column;flex-wrap: wrap;justify-content: center;align-items: center;margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
+/*INICIO DO MENU*/
 .navegacao{
-position: relative;
     position: fixed;
-    z-index: 1;
     display: flex;
     width: 100%;
     height: 80px;
@@ -96,72 +108,218 @@ position: relative;
 .margemDoTopo{
     padding-top: 80px;
 }
-.tabela{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    background: rgb(206, 206, 206);
 
-}
-.faixaCategoria{
-    padding:10px 0;
+/*Login*/
+.loginForm{
     display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
-.centralizarEAlinha{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.boxFaixaCategoria{
-    width: 290px;
-    height: 330px;
-    color: wheat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(19, 17, 17, 0.986);
-    color: blanchedalmond;
-    cursor: pointer;
-}
-.boxFaixaCategoria:hover{
-    background: #2D1E2F;
-}
-.rodape{
-    width: 100%;
-    height: 100px;
-    background-color: #2D1E2F;
-    color: blanchedalmond;
-    text-align: center;
-    line-height: 100px;
-    font-weight: 100;
-    font-size: 14px;
-}
-/*LOGIN E CADASTRO*/
-.newslatter{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;background-image: url(/img/newslatter.jpg);
-    background-position: center;
-    background-size: auto;
-    width: 80%;
-    padding: 40px 40px;
-    margin: 20px 0;
-}
-.newslatter input{
+.loginForm input{
     border: 1px solid rgba(0, 0, 0, 0.589);
-    background: white;
+    background: transparent;
     color: rgb(27, 27, 27);
     padding: 10px 10px;
-    
     font-size: 16px;
+}
+
+.loginForm p a{
+    color: rgba(0, 0, 0, 0.514);
+}
+.loginForm p a:hover{
+    color:#2D1E2F;
+}
+.botaoLogin:hover{
+    background: #2D1E2F;
+    border: transparent;
+    color: thistle;
+}
+.botaoLogin{
+    padding: 0 20px;
+}
+
+.rodape{
+    width: 100%;
+    height: 200px;
+    background-color: #2D1E2F;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.divisaoRodape{
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divisaoRodape ul li{
+    list-style: none;
+}
+.divisaoRodape ul li a{
+    text-decoration: none;
+    color: white;
 }
 .container{
     width: 100%;display: flex;justify-content: center;align-items: center;
 }
-.c
+
+/*PRODUTO DETALHE*/
+.paginaDeCompra{
+    display: flex;
+}
+.produtoDetalhebg{
+    display: flex;
+}
+.produtoDetalhebg p{
+    font-size: 1.2em;
+}
+.produtoImagembg{
+    display: flex;
+}
+    .produtoImagem{
+        width: 70%;
+        margin: 0 auto;
+    }
+        .produtoImagem img{
+            width: 100%; 
+        }
+.produtoPagamentobg{
+    display: flex;
+}
+.produtoPagamento p{
+ font-size: 1.2em;
+ text-align: left;
+}
+.linksDeAcesso{
+    padding-top: 110px;
+    color:#2D1E2F ;
+    width: 100%;
+    height: 80px;
+    font-size: 1em;
+}
+.linksDeAcesso a{
+    color:#2D1E2F ;
+    text-decoration: none;
+}
+/*PRODUTOS*/
+.box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.grade{
+    width: 80%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.conteudo{
+    width: 250px;
+    height: auto;
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+.conteudo > .imagemConteudo{
+    width: 240px;
+    height: 250px;
+    background: rgb(218, 217, 217);
+    margin-bottom: 5px;
+    border-radius:2px ;
+    cursor: pointer;
+}
+.conteudo > .tituloConteudo{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(240, 240, 240);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.conteudo > .valorConteudo{
+    width: 100px;
+    height: 40px;
+    border-radius:2px ;
+    background: rgb(241, 241, 241);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/*USUARIO LISTA*/
+
+.imagemUsuario{
+    width: 80px;
+    height: 80px;
+    background: rgb(226, 225, 225);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius:50px ;
+}
+.idUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.nomeUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.loginUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.senhaUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.tipoUsuario{
+    width: 190px;
+    border-radius:2px ;
+    height: 40px;
+    background: rgb(226, 225, 225);
+    margin-bottom: 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.alteracoesUsuario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

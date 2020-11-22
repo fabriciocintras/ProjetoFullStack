@@ -1,8 +1,7 @@
 @model Usuario
 @{     ViewData["Title"] = "Login"; }
 
-    <div class="containerGeral"style="height:100vh">
-        <p>@ViewBag.Mensagem</p>
+    <div class="container margemDoTopo">
         <form asp-action="LoginCliente" method="POST" class="loginForm">
             <P>
                <h1> FAÇA O LOGIN</h1>
@@ -14,6 +13,7 @@
                 <input type="text" asp-for="Senha" placeholder="Senha" size="50">
             </p>
             <p><a href="">Esqueceu sua senha?</a></p>
+        <p>@ViewBag.Mensagem</p>
             <p>
                 <input type="submit" value="ACESSAR CONTA" class="botaoLogin">
             </p>

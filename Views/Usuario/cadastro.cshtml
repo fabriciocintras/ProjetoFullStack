@@ -2,11 +2,9 @@
 @{     ViewData["Title"] = "Login"; }
 
   <p>@ViewBag.Mensagem</p>
-        <form asp-action="Cadastro" method="POST" class="loginForm">
-            <P>
-               <h1> Cadastro de usuario:
-               </h1>
-            </P>
+       <div class="container">
+            <form asp-action="Cadastro" method="POST" class="loginForm">
+            <h1>CADASTRO DE USUARIO</h1>
             <p>
                 <input type="text" asp-for="Nome" placeholder="Nome" size="50">
             </p>
@@ -16,16 +14,16 @@
              <p>
                 <input type="text" asp-for="Senha" placeholder="Senha" size="50">
             </p>
-             <p>         
-             <label asp-for="Tipo">Tipo de conta:</label>         
-            <select asp-for="Tipo" id="">
+            <p>         
+            <label asp-for="Tipo">Tipo de conta:</label>         
+                <select asp-for="Tipo" id="">
                 <option value="0">ADMINISTRADOR</option>
                 <option value="1">COLABORADOR</option>
             </select>     
-        </p>    
+            </p>  
+
             <p>
                 <input type="submit" value="CADASTRAR" class="botaoLogin">
             </p>
-            
-        </form>
-    </div>
+            </form>
+        </div>

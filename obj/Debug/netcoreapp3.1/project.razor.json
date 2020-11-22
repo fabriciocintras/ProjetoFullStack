@@ -14457,8 +14457,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Cadastro.cshtml",
-      "TargetPath": "Views\\Usuario\\Cadastro.cshtml",
+      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\cadastro.cshtml",
+      "TargetPath": "Views\\Usuario\\cadastro.cshtml",
       "FileKind": "mvc"
     },
     {

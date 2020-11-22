@@ -1,13 +1,12 @@
 @model Usuario
 @{     ViewData["Title"] = "cadastro usuario"; }
 
-  <div class="containerGeral"style="height:100vh">
-        <p>@ViewBag.Mensagem</p>
+  <div class="containerGeral">
         <form asp-action="cadastroCliente" method="POST" class="loginForm">
-            <P>
-               <h1> Cadastro de usuario:
-               </h1>
-            </P>
+       
+               <h1> CADASTRO DE USUARIO</h1>
+        <p>@ViewBag.Mensagem</p>
+          
             <p>
                 <input type="text" asp-for="Nome" placeholder="Nome" size="50">
             </p>
