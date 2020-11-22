@@ -2,31 +2,30 @@
 @{     ViewData["Title"] = "Listagem de Produtos"; } 
 
 <div class="container">
-        <div class="box">
-                <h1>LISTA DE PRODUTOS</h1>
-            <div class="grade">
-                @foreach (Produtos i in Model)
-                {
-                <div class="conteudo">
-                    <div class="imagemConteudo">
-                        
-                    </div>
-                    <div class="tituloConteudo">
-                        @i.Nome
-                    </div>
-                    <div class="valorConteudo">
-                        @i.Valor
-                    </div>
-                     <td>
-                   <a href="/Produtos/Editar?Id=@i.Id">editar</a>
-                   <span> | </span>
-                   <a href="/Produtos/Remover?Id=@i.Id">remover</a>
-               </td>
+    <div class="box">
+            <h2>Lista de Produtos</h2>
+            <p>
+                Edite ou exclua produtos 
+            </p>
+        <div class="grade">
+            @foreach (Produtos i in Model)
+            {
+            <div class="conteudo">
+                <div class="imagemConteudo">
+                    
                 </div>
-                }
-               
-                
+                <div class="tituloConteudo">
+                    @i.Nome
+                </div>
+                <div class="valorConteudo">
+                    @i.Valor
+                </div>
+                    <td>
+                <a href="/Produtos/Editar?Id=@i.Id">editar </a>
+                <a href="/Produtos/Remover?Id=@i.Id"> remover</a>
+                </td>
             </div>
+            }  
         </div>
-       
-    </div>
+    </div>  
+</div>

@@ -3,9 +3,7 @@
 
     <div class="container margemDoTopo">
         <form asp-action="LoginCliente" method="POST" class="loginForm">
-            <P>
-               <h1> FAÇA O LOGIN</h1>
-            </P>
+               <h2>Login:</h2>
             <p>
                 <input type="text" asp-for="Login" placeholder="Login">
             </p>
@@ -13,10 +11,10 @@
                 <input type="password" asp-for="Senha" placeholder="Senha">
             </p>
             <p><a href="">Esqueceu sua senha?</a></p>
-        <p>@ViewBag.Mensagem</p>
             <p>
                 <input type="submit" value="ACESSAR CONTA" class="botaoLogin">
             </p>
+            <p>@ViewBag.Mensagem</p>
             
         </form>
     </div>

@@ -7,6 +7,10 @@
     position: relative;
     z-index: 1000;
     padding: 15px;
+    width: 100%;
+}
+#abrirMenu ul{
+    display: block;width: 100%;
 }
 #abrirMenu img{
     margin: 0 auto;
@@ -15,9 +19,7 @@
 }
 @media(max-width:600px){
 
-    #bannerPromocao{
-       position: absolute;top: 0;
-    }
+  
     .navegacao{
         display: none;
     }
@@ -40,9 +42,10 @@
         transform: translate3d(0px,0,0);
     }
     .btnMenu{
-        width: 40px;
+        width: 100%;display: flex;justify-content: start;align-items: center;
         background: transparent;
         border: none;
+
     }
     .btnMenu img{
         width: 40px;display: flex;
@@ -141,7 +144,117 @@
         flex-direction: column;
         padding-top: 0px;
     }
-    
+    /*controle adminstrativo*/
+    .controle ul{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+    }
+    .controle ul li{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .controle ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        list-style: none;
+        padding:5px 0 ;
+        font-weight: bold;
+    }
+    /*responsivo index*/
+    .container-promocoes
+    {
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+        .botao-promocao
+    {
+        display: flex;
+        background:#53135D;
+        width: 47%;
+        margin: 5px;
+        color: #FFFFFF;
+        justify-content: center;
+        align-items: center;
+    }
+    .featuring{
+        background-size: cover;
+    }
+
+    .container-featuring
+    {
+        position: relative;
+        width: 100%;
+        height:90vh;
+        padding-top: 77px;
+    }
+    .container-featuring > .frete
+    {display: none;
+    }
+    #button-featuring
+    {
+        position: absolute;bottom: 100px;
+    }
+    .container-sessao
+    {
+        width: 100%;
+        justify-content: center;
+        overflow: hidden;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .box-sessao
+    {
+        margin:5px;
+        width: 100%;
+    }
+    .sessao{
+        display: flex;
+        
+    }
+
+    .container-categorias
+    {
+        width: 100%;
+        justify-content:center;
+    }
+    .categoria-img
+    {
+        margin:15px;
+        width: 150px;
+        height: 150px;
+    }
+    .marcas
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .container-marcas
+    {
+        justify-content: center;
+        width: 80%;
+
+        
+        
+    }
+    .img-marcas
+    {
+        margin:30px 0 ;
+
+    }
+    /*responsivo index*/
+
 
 }
 

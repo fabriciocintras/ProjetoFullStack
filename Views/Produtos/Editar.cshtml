@@ -2,32 +2,24 @@
 @{
 ViewData["Title"]="Editar Produtos";
 }
-
-
     <div class="container" >
-<h2>Editar Produtos</h2> 
-        <p>@ViewBag.Mensagem</p>
+        <h2>Editar Produtos</h2> 
         <form  asp-action="Gravar" method="POST" class="loginForm">
-            <P>
-               <h1> Editar</h1>
-            </P>
-           <p> 
-            <input type="hidden" asp-for="Id">          
-            <input asp-for="Nome"  placeholder="Nome">     
-        </p>     
-          <p>         
-                   
-            <input asp-for="Quantidade" placeholder="Quantidade">     
-        </p>    
-        <p>              
-            <input asp-for="Valor"  placeholder="Valor">     
-        </p>     
-      
-        <p>         
-            <input type="submit" value="Cadastrar" />     
-        </p> 
-        
+    
+            <h2> Editar</h2> 
+           <p>
+                <input type="hidden" asp-for="Id">          
+                <input asp-for="Nome"  placeholder="Nome">     
+            </p>     
+            <p>             
+                <input asp-for="Quantidade" placeholder="Quantidade">     
+            </p>    
+            <p>              
+                <input asp-for="Valor"  placeholder="Valor">     
+            </p>     
+            <p>         
+                <input type="submit" value="Cadastrar" />     
+            </p> 
+            <p>@ViewBag.Mensagem</p>
         </form>
-         <p id="">@ViewBag.Mensagem</p>
-     
     </div>

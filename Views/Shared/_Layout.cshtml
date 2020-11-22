@@ -15,7 +15,11 @@
        <!--MOBILE--ACESSO SEM NENHUM TIPO DE USUARIO; ACESSO SEM LOGIN!!!-->
         @if(Context.Session.GetInt32("idUsuario")==null){
             <button id="abrirMenu" class="btnMenu">
-                <img src="~/img/btn.svg" alt="">
+                <img src="~/img/menu.svg" alt="">
+
+                <ul>
+                    <li class="logo">Fabricio Alves</li>
+                </ul>
             </button>
             <nav id="menuResponsivo">
                 <div class="usuarioLogado">
@@ -33,7 +37,7 @@
         <!--MOBILE--ACESSO DO TIPO ADMINISTRADOR;  TEM ACESSO AO PAINEL ADMINISTRATIVO; LIBERADO TODAS AS AÇÕES DENTRO DO PAINEL ADMINISTRATIVO-->
         @if(Context.Session.GetInt32("idUsuario")!= null && Context.Session.GetInt32("tipoUsuario")==0 ){
             <button id="abrirMenu" class="btnMenu">
-                <img src="~/img/btn.svg" alt="">
+                <img src="~/img/menu.svg" alt="">
             </button>
             <nav id="menuResponsivo">
                 <div class="usuarioLogado">
@@ -50,7 +54,7 @@
         <!--MOBILE--ACESSO DO TIPO ADMINISTRADOR;  TEM ACESSO AO PAINEL ADMINISTRATIVO; LIBERADO TODAS AS AÇÕES DENTRO DO PAINEL ADMINISTRATIVO-->
         @if(Context.Session.GetInt32("idUsuario")!= null && Context.Session.GetInt32("tipoUsuario")==1 ){
             <button id="abrirMenu" class="btnMenu">
-                <img src="~/img/btn.svg" alt="">
+                <img src="~/img/menu.svg" alt="">
             </button>
             <nav id="menuResponsivo">
                 <div class="usuarioLogado">
@@ -67,7 +71,7 @@
         <!--MOBILE--ACESSO DO TIPO CLIENTE;NAO TEM ACESSO AO PAINEL ADMINISTRATIVO; APENAS NAVEGAÇÃO NA PAGINA!!!-->
         @if(Context.Session.GetInt32("idUsuario")!= null && Context.Session.GetInt32("tipoUsuario")==2){
             <button id="abrirMenu" class="btnMenu">
-                <img src="~/img/btn.svg" alt="">
+                <img src="~/img/menu.svg" alt="">
             </button>
             <nav id="menuResponsivo">
             <div class="usuarioLogado">

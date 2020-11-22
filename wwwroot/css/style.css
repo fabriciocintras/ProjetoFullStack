@@ -95,20 +95,22 @@ html,body{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding:80px 0 0 0;
+    justify-content: space-between;
+    padding-top:80px;
     background: rgb(71, 71, 71);
 }
 .controle ul{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    flex-wrap: wrap;
     list-style: none;
 }
 .controle ul li a{
+
     color: white;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1rem;
 }
 .margemDoTopo{
     padding-top: 80px;
@@ -335,5 +337,168 @@ html,body{
     text-decoration: none;
     color: white;
 }
+/*index*/
+.featuring
+{
+ 
+    width: 100%;height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("~img/fashion-1031469_1920.jpg");
 
+}
+.container-featuring
+{
+    position: relative;
+    width: 100%;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+}
+.container-featuring > .frete
+{
+    position: absolute;
+    top: 110px;
+    background: #f0eeeede;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#button-featuring
+{
+    display: flex;
+    align-self: center;
+    padding: 10px 60px;
+    background: #25110181;
+    color: #f1f1f1;
+    border: none;
+    position: absolute;bottom: 100px;
+    font-size: 1.2em;
+}
+.promocoes{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+.container-promocoes
+{
+    display: flex;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+.botao-promocao
+{
+    display: flex;
+    background:#53135D;
+    width: 22%;
+    padding: 15px 0px;
+    color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-sessao
+{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+
+}
+.box-sessao
+{
+    margin:80px 0 ;
+    display: flex;
+    flex-direction: column;
+
+    width: 30%;
+    overflow: hidden;
+}
+.box-sessao-img
+{
+    overflow: hidden;
+    width: 100%;
+}
+
+.box-sessao-img img{
+    width:100%;  
+    overflow: hidden;
+}
+
+.box-sessao > p{
+    text-align: center;
+}
+.categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-categorias
+{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+.categoria-img
+{
+    margin:80px 0 ;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.219);
+}
+.categoria-img img{
+    width: 100%;
+    
+}
+.marcas
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-marcas
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.img-marcas
+{
+    margin:80px 0 ;
+    width: 180px;
+    height: auto;
+    overflow: hidden;
+}
+.img-marcas img{
+    width: 100%;
+}
+/*fim index*/
 
