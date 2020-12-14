@@ -52,11 +52,12 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
             conexao.Open();
-            string sql = "update Produto set Nome = @Nome, Quantidade = @Quantidade, Valor = @Valor" ;
+            string sql = "update Produto set Nome = @Nome, Quantidade = @Quantidade, Valor = @Valor  where Id = @Id" ;
             MySqlCommand comando = new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@Nome",produtos.Nome);
             comando.Parameters.AddWithValue("@Quantidade",produtos.Quantidade);
             comando.Parameters.AddWithValue("@Valor",produtos.Valor);
+            comando.Parameters.AddWithValue("@Id",produtos.Id);
             comando.ExecuteNonQuery();
             conexao.Close();
         }

@@ -47,7 +47,7 @@ namespace ProjetoFullStack.Controllers
         {
             ProdutosBanco pb = new ProdutosBanco();
             pb.Atualizar(produto);
-            return RedirectToAction("Listar");
+            return Redirect("Listar");
         }
         public IActionResult Remover(int Id)
         {

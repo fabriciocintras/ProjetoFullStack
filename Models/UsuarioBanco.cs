@@ -79,7 +79,7 @@ namespace ProjetoFullStack.Models
         {
             MySqlConnection conexao = new MySqlConnection(dadosConexao);
             conexao.Open();
-            string sql = "update Usuario set Login = @Login, Senha = @Senha, Nome = @Nome, Tipo = @Tipo where Id = @Id";
+            string sql = "update Usuario set Nome = @Nome, Login = @Login, Senha = @Senha, Nome = @Nome, Tipo = @Tipo where Id = @Id";
             MySqlCommand comando = new MySqlCommand(sql,conexao);
             comando.Parameters.AddWithValue("@Nome",usuario.Nome);
             comando.Parameters.AddWithValue("@Tipo",usuario.Tipo);

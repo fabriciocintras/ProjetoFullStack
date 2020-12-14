@@ -19,6 +19,7 @@ html,body{
     width: 80%;
     height: auto;
     margin: 0 auto;
+    padding-bottom: 100px;
 }
 .containerGeral
 {
@@ -33,7 +34,7 @@ html,body{
 /*INICIO DO MENU*/
 .navegacao{
     z-index: 1;
-    position: relative;
+    position: absolute;
     position: fixed;
     display: flex;
     width: 100%;
@@ -92,25 +93,32 @@ html,body{
     list-style: none;
 }
 .controle{
+    position: absolute;top: 80px; position: fixed;z-index: 1000;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-top:80px;
+    /*padding-top:80px;*/
     background: rgb(71, 71, 71);
 }
 .controle ul{
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     flex-wrap: wrap;
     list-style: none;
 }
 .controle ul li a{
-
+    
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1em;
+    list-style: none;
+    padding:5px 0 ;
+    font-weight: bold;
+}
+.controle ul li a:hover{
+    
+    color:#2D1E2F;
 }
 .margemDoTopo{
     padding-top: 80px;
@@ -118,10 +126,11 @@ html,body{
 
 /*Login*/
 .loginForm{
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 100%;padding: 0;
+    max-width: 100%;padding-top: 100px;
 }
 .loginForm input{
     border: 1px solid rgba(0, 0, 0, 0.589);
@@ -193,6 +202,7 @@ html,body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top:100px;
 }
 .grade{
     width: 100%;
@@ -205,17 +215,17 @@ html,body{
     width: 250px;
     height: auto;
     margin-bottom: 18px;
-    align-items: center;
-    justify-content: center;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
     padding-top: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.103); border-radius: 1px;
 }
 .conteudo > .imagemConteudo{
     width: 240px;
     height: 250px;
     background: rgb(218, 217, 217);
-    margin-bottom: 5px;
     border-radius:2px ;
     cursor: pointer;
 }
@@ -223,21 +233,24 @@ html,body{
     width: 190px;
     border-radius:2px ;
     height: 40px;
-    background: rgb(240, 240, 240);
-    margin-bottom: 5px;
-    justify-content: center;
+    justify-content: start;
     display: flex;
     align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(88, 88, 88);
 }
 .conteudo > .valorConteudo{
-    width: 100px;
+    width: 190px;
     height: 40px;
     border-radius:2px ;
-    background: rgb(241, 241, 241);
-    margin-bottom: 5px;
-    justify-content: center;
     display: flex;
+    margin-bottom: 5px;
+    justify-content: start;
     align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(88, 88, 88);
 }
 
 /*USUARIO LISTA*/
@@ -312,7 +325,7 @@ html,body{
 }
 /*RODAPE*/
 .rodape{
-    position: relative;top: 80px;
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
@@ -321,7 +334,7 @@ html,body{
     align-items: center;
     background-color: #2D1E2F;
     color: blanchedalmond;
-    padding: 15px 0;
+    padding: 50px 0;
 }
 .divisaoRodape{
     justify-content: center;
@@ -360,7 +373,7 @@ html,body{
 .container-featuring > .frete
 {
     position: absolute;
-    top: 110px;
+    top: 130px;
     background: #f0eeeede;
     width: 100%;
     height: 40px;
@@ -398,7 +411,7 @@ html,body{
 .botao-promocao
 {
     display: flex;
-    background:#53135D;
+    background:#2D1E2F;
     width: 22%;
     padding: 15px 0px;
     color: #f1f1f1;
@@ -408,9 +421,12 @@ html,body{
 
 .sessao
 {
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(241, 241, 241);
 }
 .container-sessao
 {
@@ -435,6 +451,10 @@ html,body{
     overflow: hidden;
     width: 100%;
 }
+.box-sessao:hover
+{
+   background: rgba(41, 41, 41, 0.445);
+}
 
 .box-sessao-img img{
     width:100%;  
@@ -452,7 +472,7 @@ html,body{
 }
 .container-categorias
 {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -461,8 +481,8 @@ html,body{
 .categoria-img
 {
     margin:80px 0 ;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 5px solid rgba(0, 0, 0, 0.219);
 }
@@ -470,13 +490,15 @@ html,body{
     width: 100%;
     
 }
+
 .marcas
 {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
+    background: rgb(245, 245, 245);
     
 }
 .container-marcas
@@ -485,7 +507,7 @@ html,body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
     

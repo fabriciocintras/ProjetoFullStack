@@ -2,8 +2,10 @@
 @{
 ViewData["Title"]="Editar usuario";
 }
+<div class="container">
+        <div class="box">
     <h2>Editar Usuario</h2> 
-    <form asp-action="Gravar" method="POST">      
+    <form asp-action="Gravar" method="POST" class="loginForm">      
         <p> 
             <input type="hidden" asp-for="Id">        
             <label asp-for="Nome">Nome:</label>         
@@ -29,3 +31,5 @@ ViewData["Title"]="Editar usuario";
         </p> 
         <p id="">@ViewBag.Mensagem</p>
     </form> 
+    </div>
+    </div>
