@@ -56,11 +56,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\ProjetoFullStack.csproj",
+      "projectUniqueName": "C:\\Users\\Fabrício\\Desktop\\etapa6\\ProjetoFullStack.csproj",
       "projectName": "ProjetoFullStack",
-      "projectPath": "C:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\ProjetoFullStack.csproj",
+      "projectPath": "C:\\Users\\Fabrício\\Desktop\\etapa6\\ProjetoFullStack.csproj",
       "packagesPath": "C:\\Users\\Fabrício\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\obj\\",
+      "outputPath": "C:\\Users\\Fabrício\\Desktop\\etapa6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Fabrício\\AppData\\Roaming\\NuGet\\NuGet.Config",

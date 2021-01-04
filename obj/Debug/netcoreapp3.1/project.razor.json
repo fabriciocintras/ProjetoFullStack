@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\ProjetoFullStack.csproj",
+  "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\ProjetoFullStack.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,77 +14392,77 @@
   "RootNamespace": "ProjetoFullStack",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\ListarColab.cshtml",
-      "TargetPath": "Views\\Usuario\\ListarColab.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\LoginCliente.cshtml",
-      "TargetPath": "Views\\Usuario\\LoginCliente.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Cadastro.cshtml",
-      "TargetPath": "Views\\Produtos\\Cadastro.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Listar.cshtml",
-      "TargetPath": "Views\\Usuario\\Listar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Editar.cshtml",
-      "TargetPath": "Views\\Produtos\\Editar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\cadastroCliente.cshtml",
-      "TargetPath": "Views\\Usuario\\cadastroCliente.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\ListarProdutos.cshtml",
-      "TargetPath": "Views\\Produtos\\ListarProdutos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Login.cshtml",
-      "TargetPath": "Views\\Usuario\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Produtos\\Listar.cshtml",
-      "TargetPath": "Views\\Produtos\\Listar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\cadastro.cshtml",
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\ListarColab.cshtml",
+      "TargetPath": "Views\\Usuario\\ListarColab.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Produtos\\Editar.cshtml",
+      "TargetPath": "Views\\Produtos\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\cadastro.cshtml",
       "TargetPath": "Views\\Usuario\\cadastro.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Fabrício\\Documents\\repositorio local git\\ProjetoFullStack\\Views\\Usuario\\Editar.cshtml",
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\Login.cshtml",
+      "TargetPath": "Views\\Usuario\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\Listar.cshtml",
+      "TargetPath": "Views\\Usuario\\Listar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Produtos\\ListarProdutos.cshtml",
+      "TargetPath": "Views\\Produtos\\ListarProdutos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Produtos\\Cadastro.cshtml",
+      "TargetPath": "Views\\Produtos\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\LoginCliente.cshtml",
+      "TargetPath": "Views\\Usuario\\LoginCliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Produtos\\Listar.cshtml",
+      "TargetPath": "Views\\Produtos\\Listar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\cadastroCliente.cshtml",
+      "TargetPath": "Views\\Usuario\\cadastroCliente.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Fabrício\\Desktop\\etapa6\\Views\\Usuario\\Editar.cshtml",
       "TargetPath": "Views\\Usuario\\Editar.cshtml",
       "FileKind": "mvc"
     }
